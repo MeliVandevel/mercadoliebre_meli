@@ -17,6 +17,14 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/login.html'));
 });
 
+app.post('/login', (req, res) => {
+    res.redirect(path.join('/login'));
+});
+
+app.post('/register', (req, res) => {
+    res.redirect(path.join('/'));
+});
+
 const port = process.env.PORT || 3030;
 app.listen(port, () => {
     console.log(`Servidor iniciado en http://localhost:${port}`);

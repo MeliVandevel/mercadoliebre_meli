@@ -1,4 +1,3 @@
-
 * {
   margin: 0px;
   padding: 0px;
@@ -40,8 +39,7 @@ header div.logo {
 header .form {
   display: flex;
   align-items: center;
-  padding:2px;
-  font-size: 11px;
+  margin: auto;
 }
 
 header nav {
@@ -58,19 +56,24 @@ header ul li a {
   color: #000;
 }
 
-header .form .nav-bar {
+.input-nav-bar {
   background-color: #fff;
-  border: 1px solid #fff;
-  outline: none;
   color: #666;
-  padding: 2px;
+  font-size: 11px;
+  border: #fff;
+  border-radius: 4px;
+  width: 90%;
+  padding: 8px
 }
 
-header .form .search {
+.nav-search-btn {
   background-color: #fff;
-  border: 1px solid #fff;
   color: #666;
+  border: #fff;
   width: 10%;
+  padding: 2px;
+  position: relative;
+  right: 15px;
 }
 
 header div.top-header p {
@@ -179,9 +182,9 @@ main section article i,
 .discount {
   color: #39b54a;
 }
+
 header nav,
-.section-offers, 
-.hide-footer {
+.section-offers {
   display: none;
 }
 
@@ -209,11 +212,91 @@ footer section article p {
 #rights {
   background-color: #fff;
   color: #666;
-  padding: 8%
+  padding-left: 2%;
 }
 
+.input-container {
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 11px;
+  padding: 4px;
+}
+
+button {
+  color: white;
+  font-size: 11px;
+  background-color: #1259c3;
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+  cursor:pointer;
+  transition: background-color 400ms;
+}
+
+button:hover {
+  background-color: #0022AA;
+}
 
 @media (min-width: 361px) {
+
+  div.top-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+  }
+
+  header div.logo,
+  header .form,
+  header div.top-header p {
+    width: 33%;
+  }
+
+  header div.top-header p {
+    font-size: 11px;
+  }
+
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #siteBar,
+  #loginBar {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  header .form {
+    justify-content: space-around;
+    position: relative;
+    left: 20px;    
+  }
+  
+  .input-nav-bar {
+    padding: 2px;
+    border: 1px solid #666;
+    border-top: none;
+    border-radius: 3px;
+    width: 62%;
+    height: 20px;
+    padding: 2px 10px 2px 5px;
+  }
+  
+  .nav-search-btn {
+    background-color: #ebebeb;
+    color: #000;
+    border: 0.5px solid #666;
+    border-radius: 2px;
+    padding: 1px 0px 1px;
+    width: 8%;
+    right: 30px;
+  }
+
   .description {
     display: block;
   }
@@ -239,23 +322,83 @@ footer section article p {
     width: 50%;
   }
 
-  header nav,
-  .hide-section-offers, 
-  .hide-footer {
+  .hide-section-offers {
     display: block;
   }
 
   div.burger-menu {
     display: none;
   }
-
 }
 
-@media (min-width: 769px){
+@media (min-width: 768px){
+  
+  main section article .description {
+    position: relative;
+    opacity: 0;
+    transition: opacity 400ms;
+  }
+
+  main section article :hover .description {
+    opacity:1;
+  }
+
   .products article {
     width: 22%;
   }
 
+  main section div.products article {
+    width: 22%;
+    box-shadow: none;
+    transition: box-shadow 400ms;
+    cursor: pointer;
+  }
+
+  main section div.products article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  main section article i {
+    transition: transform 400ms;
+  }
+
+  main section article:hover i {
+    transform: rotate(-90deg);
+  }
+  
+  footer section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  footer section article {
+    width: 33%;
+  }
+
+  footer section article {
+    padding: 20px 0px 20px;
+  }
+  
+  footer section article i {
+    margin-bottom: 10px;
+    cursor:pointer;
+    transition: color 1000ms;
+  }
+
+  footer section article i:hover {
+    color:#03264C;
+  }
+
+  footer section article h4 {
+    font-size: 15px;
+  }
+  
+  footer section article p {
+    font-size: 11px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 
 
